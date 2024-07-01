@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import Nansen2 from "./pages/Nansen2";
+import Layout from "./components/Layout";
+import Alpha from "./pages/Alpha";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Api from "./pages/Api";
+import CryptoInvester from "./pages/CryptoInvester";
+import Insight from "./pages/Insight";
+import Blog from "./pages/Blog";
+import Pricing from "./pages/Pricing";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+// import InfiniteScroll from "./components/InfiniteScroll";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/nansen2" element={<Nansen2 />} />
+            <Route path="/alpha" element={<Alpha />} />
+            <Route path="/api" element={<Api />} />
+            <Route path="/cryptoinvestor" element={<CryptoInvester />} />
+            <Route path="/insight" element={<Insight />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </>
   );
 }
 
