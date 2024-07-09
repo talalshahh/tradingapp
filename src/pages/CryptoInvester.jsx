@@ -111,7 +111,7 @@ const CryptoInvester = () => {
   ];
 
   return (
-    <>
+    <Box sx={{ backgroundColor: "rgba(0,0,0,0.6)" }}>
       <Box
         sx={{
           width: "100%",
@@ -918,7 +918,7 @@ const CryptoInvester = () => {
           </Container>
         </motion.div>
       </Box>
-    </>
+    </Box>
   );
 };
 

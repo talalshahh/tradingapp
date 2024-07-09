@@ -71,7 +71,7 @@ const Home = () => {
     <>
       <Box
         sx={{
-          backgroundColor: "black	",
+          backgroundColor: "rgba(0,0,0,0.6)	",
           color: "white",
           height: "100%",
 
